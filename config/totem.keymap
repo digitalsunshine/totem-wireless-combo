@@ -113,7 +113,7 @@
     &none        &kp P            &kp O           &kp U           &none            &none        &kp K           &kp L           &kp D           &none
     &kp I        &kp N            &kp E           &kp A           &none            &none        &kp M           &kp T           &kp S           &kp R
     &kp DOWN     &kp LEFT         &kp UP          &kp RIGHT       &none            &none        &mmv MOVE_LEFT  &mmv MOVE_UP    &mmv MOVE_RIGHT &mmv MOVE_DOWN
-                 &none            &mt_LALT ENTER  &mt LCTRL TAB   &mt LSHFT SPACE  &none   &td0            &lt 3 DEL       &lt 1 BSPC
+                 &none            &mt LALT ENTER  &mt LCTRL TAB   &mt LSHFT SPACE  &none   &td0            &lt 3 DEL       &lt 1 BSPC
             >;
         };
  
