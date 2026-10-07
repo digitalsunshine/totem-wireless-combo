@@ -40,22 +40,21 @@
         /* ================================================================== */
         /*                       BASE LAYER (LAYER 0) COMBOS                  */
         /* ================================================================== */
-        combo_minus    { timeout-ms = <50>; key-positions = <1 6>;   layers = <0>; bindings = <&kp MINUS>; };
-        combo_j        { timeout-ms = <50>; key-positions = <2 7>;   layers = <0>; bindings = <&kp J>; };
-        combo_g        { timeout-ms = <50>; key-positions = <3 8>;   layers = <0>; bindings = <&kp G>; };
-        combo_b        { timeout-ms = <50>; key-positions = <20 25>; layers = <0>; bindings = <&kp B>; };
-        combo_h        { timeout-ms = <50>; key-positions = <21 26>; layers = <0>; bindings = <&kp H>; };
-        combo_c        { timeout-ms = <50>; key-positions = <22 27>; layers = <0>; bindings = <&kp C>; };
+        combo_minus    { timeout-ms = <50>; key-positions = <7 18>;   layers = <0>; bindings = <&kp MINUS>; };
+        combo_j        { timeout-ms = <50>; key-positions = <3 18>;   layers = <0>; bindings = <&kp J>; };
+        combo_g        { timeout-ms = <50>; key-positions = <8 18>;   layers = <0>; bindings = <&kp G>; };
+        combo_b        { timeout-ms = <50>; key-positions = <25 34>; layers = <0>; bindings = <&kp B>; };
+        combo_h        { timeout-ms = <50>; key-positions = <26 34>; layers = <0>; bindings = <&kp H>; };
+        combo_c        { timeout-ms = <50>; key-positions = <20 34>; layers = <0>; bindings = <&kp C>; };
  
-        combo_q        { timeout-ms = <50>; key-positions = <1 2>;   layers = <0>; bindings = <&kp Q>; };
-        combo_w        { timeout-ms = <50>; key-positions = <2 3>;   layers = <0>; bindings = <&kp W>; };
-        combo_v        { timeout-ms = <50>; key-positions = <20 21>; layers = <0>; bindings = <&kp V>; };
-        combo_x        { timeout-ms = <50>; key-positions = <21 22>; layers = <0>; bindings = <&kp X>; };
+        combo_q        { timeout-ms = <50>; key-positions = <6 18>;   layers = <0>; bindings = <&kp Q>; };
+        combo_w        { timeout-ms = <50>; key-positions = <22 34>;   layers = <0>; bindings = <&kp W>; };
+        combo_v        { timeout-ms = <50>; key-positions = <21 34>; layers = <0>; bindings = <&kp V>; };
+        combo_x        { timeout-ms = <50>; key-positions = <28 34>; layers = <0>; bindings = <&kp X>; };
  
-        combo_z        { timeout-ms = <50>; key-positions = <6 7>;   layers = <0>; bindings = <&kp Z>; };
-        combo_y        { timeout-ms = <50>; key-positions = <7 8>;   layers = <0>; bindings = <&kp Y>; };
-        combo_space    { timeout-ms = <50>; key-positions = <25 26>; layers = <0>; bindings = <&kp SPACE>; };
-        combo_f        { timeout-ms = <50>; key-positions = <26 27>; layers = <0>; bindings = <&kp F>; };
+        combo_z        { timeout-ms = <50>; key-positions = <1 18>;   layers = <0>; bindings = <&kp Z>; };
+        combo_y        { timeout-ms = <50>; key-positions = <2 18>;   layers = <0>; bindings = <&kp Y>; };
+        combo_f        { timeout-ms = <50>; key-positions = <27 34>; layers = <0>; bindings = <&kp F>; };
  
         combo_excl     { timeout-ms = <50>; key-positions = <3 5>;   layers = <0>; bindings = <&kp EXCL>; };
         combo_question { timeout-ms = <50>; key-positions = <2 5>;   layers = <0>; bindings = <&kp QUESTION>; };
@@ -67,10 +66,10 @@
         combo_del      { timeout-ms = <50>; key-positions = <2 8>;   layers = <0>; bindings = <&kp DEL>; };
  
         /* One-Shot Modifiers (Triggered via R [pos 28] + M / T / S / D) */
-        combo_osm_shift { timeout-ms = <50>; key-positions = <28 25>; layers = <0>; bindings = <&sk LSHFT>; };
-        combo_osm_alt   { timeout-ms = <50>; key-positions = <28 21>; layers = <0>; bindings = <&sk LALT>; };
-        combo_osm_ctrl  { timeout-ms = <50>; key-positions = <28 20>; layers = <0>; bindings = <&sk LCTRL>; };
-        combo_osm_gui   { timeout-ms = <50>; key-positions = <28 22>; layers = <0>; bindings = <&sk LGUI>; };
+        combo_osm_shift { timeout-ms = <50>; key-positions = <25 26>; layers = <0>; bindings = <&sk LSHFT>; };
+        combo_osm_alt   { timeout-ms = <50>; key-positions = <20 21>; layers = <0>; bindings = <&sk LALT>; };
+        combo_osm_ctrl  { timeout-ms = <50>; key-positions = <26 27>; layers = <0>; bindings = <&sk LCTRL>; };
+        combo_osm_gui   { timeout-ms = <50>; key-positions = <21 22>; layers = <0>; bindings = <&sk LGUI>; };
  
         /* ================================================================== */
         /*                 LAYER 3 (NUMPAD) COMBOS - LEFT HAND                */
