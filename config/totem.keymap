@@ -2,26 +2,27 @@
  * ZMK Keymap for Totem Split Keyboard (38 keys)
  * Customized with adjusted combo key positions & Layer 3 numpad combos.
  */
- 
+
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/pointing.h>
- 
- 
-//Physical Key Index Map key-positions Reference (Totem 38-Key Matrix)
-LEFT HAND                                 RIGHT HAND
-┌────┬────┬────┬────┬────┐                     ┌────┬────┬────┬────┬────┐
-│ 00 │ 01 │ 02 │ 03 │ 04 │  Top Row            │ 19 │ 20 │ 21 │ 22 │ 23 │
-├────┼────┼────┼────┼────┤                     ├────┼────┼────┼────┼────┤
-│ 05 │ 06 │ 07 │ 08 │ 09 │  Home Row           │ 24 │ 25 │ 26 │ 27 │ 28 │
-├────┼────┼────┼────┼────┤                     ├────┼────┼────┼────┼────┤
-│ 10 │ 11 │ 12 │ 13 │ 14 │  Bottom Row         │ 29 │ 30 │ 31 │ 32 │ 33 │
-└────┴────┴────┼────┼────┼────┐           ┌────┼────┼────┼────┴────┴────┘
-          │ 15 │ 16 │ 17 │ 18 │ Thumb     │ 34 │ 35 │ 36 │ 37 │
-          └────┴────┴────┴────┘ Cluster   └────┴────┴────┴────┘
- 
- 
+
+/*
+ * Physical Key Index Map key-positions Reference (Totem 38-Key Matrix)
+ *
+ * LEFT HAND                                 RIGHT HAND
+ * ┌────┬────┬────┬────┬────┐                     ┌────┬────┬────┬────┬────┐
+ * │ 00 │ 01 │ 02 │ 03 │ 04 │  Top Row            │ 19 │ 20 │ 21 │ 22 │ 23 │
+ * ├────┼────┼────┼────┼────┤                     ├────┼────┼────┼────┼────┤
+ * │ 05 │ 06 │ 07 │ 08 │ 09 │  Home Row           │ 24 │ 25 │ 26 │ 27 │ 28 │
+ * ├────┼────┼────┼────┼────┤                     ├────┼────┼────┼────┼────┤
+ * │ 10 │ 11 │ 12 │ 13 │ 14 │  Bottom Row         │ 29 │ 30 │ 31 │ 32 │ 33 │
+ * └────┴────┴────┼────┼────┼────┐           ┌────┼────┼────┼────┴────┴────┘
+ *           │ 15 │ 16 │ 17 │ 18 │ Thumb     │ 34 │ 35 │ 36 │ 37 │
+ *           └────┴────┴────┴────┘ Cluster   └────┴────┴────┴────
+ */
+
 / {
     behaviors {
         /* Tap Dance 0: Single Tap = Left Click, Double Tap = Middle Click */
