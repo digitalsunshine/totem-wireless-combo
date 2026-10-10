@@ -203,70 +203,70 @@
         combo_l2_n7_lh {
             timeout-ms = <50>;
             key-positions = <11 12>;
-            layers = <4>;
+            layers = <3>;
             bindings = <&kp N7>;
         };
 
         combo_l2_n8_lh {
             timeout-ms = <50>;
             key-positions = <12 13>;
-            layers = <4>;
+            layers = <3>;
             bindings = <&kp N8>;
         };
 
         combo_l2_n9_lh {
             timeout-ms = <50>;
             key-positions = <1 2>;
-            layers = <4>;
+            layers = <3>;
             bindings = <&kp N9>;
         };
 
         combo_l2_n0_lh {
             timeout-ms = <50>;
             key-positions = <2 3>;
-            layers = <4>;
+            layers = <3>;
             bindings = <&kp N0>;
         };
 
         combo_l2_minus_lh {
             timeout-ms = <50>;
             key-positions = <10 13>;
-            layers = <4>;
+            layers = <3>;
             bindings = <&kp MINUS>;
         };
 
         combo_l2_plus_lh {
             timeout-ms = <50>;
             key-positions = <10 12>;
-            layers = <4>;
+            layers = <3>;
             bindings = <&kp PLUS>;
         };
 
         combo_l2_equal_lh {
             timeout-ms = <50>;
             key-positions = <10 11>;
-            layers = <4>;
+            layers = <3>;
             bindings = <&kp EQUAL>;
         };
 
         combo_l2_slash_lh {
             timeout-ms = <50>;
             key-positions = <10 3>;
-            layers = <4>;
+            layers = <3>;
             bindings = <&kp SLASH>;
         };
 
         combo_l2_astrk_lh {
             timeout-ms = <50>;
             key-positions = <10 2>;
-            layers = <4>;
+            layers = <3>;
             bindings = <&kp ASTRK>;
         };
 
         combo_l2_bspc_lh {
             timeout-ms = <50>;
             key-positions = <10 1>;
-            layers = <4>;
+            layers = <3>;
             bindings = <&kp BSPC>;
         };
 
@@ -277,70 +277,70 @@
         combo_l2_n7_rh {
             timeout-ms = <50>;
             key-positions = <16 17>;
-            layers = <4>;
+            layers = <3>;
             bindings = <&kp N7>;
         };
 
         combo_l2_n8_rh {
             timeout-ms = <50>;
             key-positions = <17 18>;
-            layers = <4>;
+            layers = <3>;
             bindings = <&kp N8>;
         };
 
         combo_l2_n9_rh {
             timeout-ms = <50>;
             key-positions = <6 7>;
-            layers = <4>;
+            layers = <3>;
             bindings = <&kp N9>;
         };
 
         combo_l2_n0_rh {
             timeout-ms = <50>;
             key-positions = <7 8>;
-            layers = <4>;
+            layers = <3>;
             bindings = <&kp N0>;
         };
 
         combo_l2_minus_rh {
             timeout-ms = <50>;
             key-positions = <16 19>;
-            layers = <4>;
+            layers = <3>;
             bindings = <&kp MINUS>;
         };
 
         combo_l2_plus_rh {
             timeout-ms = <50>;
             key-positions = <17 19>;
-            layers = <4>;
+            layers = <3>;
             bindings = <&kp PLUS>;
         };
 
         combo_l2_equal_rh {
             timeout-ms = <50>;
             key-positions = <18 19>;
-            layers = <4>;
+            layers = <3>;
             bindings = <&kp EQUAL>;
         };
 
         combo_l2_slash_rh {
             timeout-ms = <50>;
             key-positions = <6 19>;
-            layers = <4>;
+            layers = <3>;
             bindings = <&kp SLASH>;
         };
 
         combo_l2_astrk_rh {
             timeout-ms = <50>;
             key-positions = <7 19>;
-            layers = <4>;
+            layers = <3>;
             bindings = <&kp ASTRK>;
         };
 
         combo_l2_bspc_rh {
             timeout-ms = <50>;
             key-positions = <8 19>;
-            layers = <4>;
+            layers = <3>;
             bindings = <&kp BSPC>;
         };
     };
