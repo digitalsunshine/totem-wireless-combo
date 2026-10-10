@@ -454,6 +454,7 @@
         };
 
         misc3_layer {
+            label = "MISC3";
             bindings = <
         &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
         &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
