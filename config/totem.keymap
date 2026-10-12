@@ -26,7 +26,8 @@
             trigger-period-ms = <30>;
             time-to-max-speed-ms = <0>;
             acceleration-exponent = <0>;
-            bindings = <&mmv>;
+            x-input-code = <INPUT_REL_X>;
+            y-input-code = <INPUT_REL_Y>;
         };
 
         /* Custom slow scroll for sniping */
@@ -36,7 +37,8 @@
             trigger-period-ms = <100>;
             time-to-max-speed-ms = <0>;
             acceleration-exponent = <0>;
-            bindings = <&msc>;
+            x-input-code = <INPUT_REL_HWHEEL>;
+            y-input-code = <INPUT_REL_WHEEL>;
         };
     };
 
