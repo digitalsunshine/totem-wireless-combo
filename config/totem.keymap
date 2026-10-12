@@ -20,22 +20,18 @@
             bindings = <&mkp LCLK>, <&mkp MCLK>;
         };
 
-        /* Ultra-slow, single-step mouse scrolling for sniping layer */
-
-        msc_snipe: mouse_scroll_snipe {
-            compatible = "zmk,behavior-input-two-axis";
+        /* Custom ultra-slow mouse movement for sniping */
+        mmv_snipe: mmv_snipe {
+            compatible = "zmk,behavior-point-to-quint";
             #binding-cells = <1>;
-            trigger-period-ms = <100>;     /* High delay between scroll steps */
-            time-to-max-speed-ms = <0>;    /* Instant fixed minimum speed */
-            acceleration-exponent = <0>; /* No linear speed buildup */
+            time-to-max-speed-ms = <0>;
+            acceleration-exponent = <0>;
         };
 
-        /* Ultra-slow mouse cursor movement for sniping layer */
-
-        mmv_snipe: mouse_move_snipe {
-            compatible = "zmk,behavior-input-two-axis";
+        /* Custom slow scroll for sniping */
+        msc_snipe: msc_snipe {
+            compatible = "zmk,behavior-point-to-quint";
             #binding-cells = <1>;
-            trigger-period-ms = <30>;      /* Precision cursor stepping */
             time-to-max-speed-ms = <0>;
             acceleration-exponent = <0>;
         };
@@ -551,7 +547,7 @@
         sniping_layer {
             label = "SNIPING";
             bindings = <
-        &trans  &trans  &trans  &trans  &trans    &trans  &msc_snipe SCRL_DOWN  &mmv_snipe MOVE_UP    &msc_snipe SCRL_UP     &trans
+        &trans  &trans  &trans  &trans  &trans    &trans  &msc SCRL_DOWN        &mmv MOVE_UP          &msc SCRL_UP     &trans
         &trans  &trans  &trans  &trans  &trans    &trans  &mmv_snipe MOVE_LEFT  &mmv_snipe MOVE_DOWN  &mmv_snipe MOVE_RIGHT  &mkp LCLK
 &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans                &trans                &trans                 &trans     &trans
                         &trans  &trans  &trans    &trans  &trans                &trans
