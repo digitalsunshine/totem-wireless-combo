@@ -19,17 +19,6 @@
             tapping-term-ms = <170>;
             bindings = <&mkp LCLK>, <&mkp MCLK>;
         };
-
-        mmv_snipe: mmv_snipe {
-            compatible = "zmk,behavior-input-two-axis";
-            label = "MMV_SNIPE";
-            #binding-cells = <1>;
-            x-input-code = <0>;
-            y-input-code = <1>;
-            trigger-period-ms = <100>;
-            time-to-max-speed-ms = <0>;
-            acceleration-exponent = <0>;
-        };
     };
 
     combos {
@@ -542,10 +531,10 @@
         sniping_layer {
             label = "SNIPING";
             bindings = <
-        &trans  &trans  &trans  &trans  &trans    &trans  &msc SCRL_DOWN        &mmv_snipe MOVE_UP    &msc SCRL_UP           &trans
-        &trans  &trans  &trans  &trans  &trans    &trans  &mmv_snipe MOVE_LEFT  &mmv_snipe MOVE_DOWN  &mmv_snipe MOVE_RIGHT  &mkp LCLK
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans                &trans                &trans                 &trans     &trans
-                        &trans  &trans  &trans    &trans  &trans                &trans
+        &trans  &trans  &trans  &trans  &trans    &trans  &msc SCRL_DOWN  &none   &msc SCRL_UP  &trans
+        &trans  &trans  &trans  &trans  &trans    &trans  &none           &none   &none         &mkp LCLK
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans          &trans  &trans        &trans     &trans
+                        &trans  &trans  &trans    &trans  &trans          &trans
             >;
         };
     };
