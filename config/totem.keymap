@@ -18,6 +18,28 @@
             tapping-term-ms = <170>;
             bindings = <&mkp LCLK>, <&mkp MCLK>;
         };
+
+        /* Custom Snipe Mouse Movement: Increased trigger period = dramatically slower speed */
+        mmv_snipe: mmv_snipe {
+            compatible = "zmk,behavior-input-two-axis";
+            #binding-cells = <1>;
+            trigger-period-ms = <120>;    /* Default is ~12ms. 120ms makes movement 10x slower */
+            time-to-max-speed-ms = <0>;   /* Disable acceleration ramp */
+            acceleration-exponent = <0>;  /* Strict linear, slow movement */
+            x-input-code = <INPUT_REL_X>;
+            y-input-code = <INPUT_REL_Y>;
+        };
+
+        /* Custom Snipe Mouse Scroll: Increased trigger period = single-step slow scroll */
+        msc_snipe: msc_snipe {
+            compatible = "zmk,behavior-input-two-axis";
+            #binding-cells = <1>;
+            trigger-period-ms = <250>;    /* High interval between scroll pulses */
+            time-to-max-speed-ms = <0>;
+            acceleration-exponent = <0>;
+            x-input-code = <INPUT_REL_HWHEEL>;
+            y-input-code = <INPUT_REL_WHEEL>;
+        };
     };
 
     combos {
@@ -527,13 +549,14 @@
             >;
         };
 
+        /* SNIPING Layer: Uses custom low-speed &mmv_snipe and &msc_snipe */
         sniping_layer {
             label = "SNIPING";
             bindings = <
-        &trans  &trans  &trans  &trans  &trans    &trans  &msc SCRL_DOWN  &mmv MOVE_UP    &msc SCRL_UP     &trans
-        &trans  &trans  &trans  &trans  &trans    &trans  &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &mkp LCLK
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans          &trans          &trans           &trans  &trans
-                        &trans  &trans  &trans    &trans  &trans          &trans
+        &trans  &trans  &trans  &trans  &trans    &trans  &msc_snipe SCRL_DOWN  &mmv_snipe MOVE_UP    &msc_snipe SCRL_UP     &trans
+        &trans  &trans  &trans  &trans  &trans    &trans  &mmv_snipe MOVE_LEFT  &mmv_snipe MOVE_DOWN  &mmv_snipe MOVE_RIGHT  &mkp LCLK
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans                &trans                &trans                 &trans  &trans
+                        &trans  &trans  &trans    &trans  &trans                &trans
             >;
         };
     };
