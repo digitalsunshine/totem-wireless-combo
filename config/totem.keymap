@@ -1,4 +1,4 @@
-f/*
+/*
  * ZMK Keymap for Totem Split Keyboard (38 keys)
  * Customized with adjusted combo key positions & Layer 3 numpad combos.
  */
@@ -11,12 +11,29 @@ f/*
 / {
     behaviors {
         /* Tap Dance 0: Single Tap = Left Click, Double Tap = Middle Click */
-
         td0: tap_dance_0 {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             tapping-term-ms = <170>;
             bindings = <&mkp LCLK>, <&mkp MCLK>;
+        };
+
+        /* Ultra-slow, single-step mouse scrolling for sniping layer */
+        msc_snipe: mouse_scroll_snipe {
+            compatible = "zmk,behavior-input-two-axis";
+            #binding-cells = <1>;
+            trigger-period-ms = <100>;     /* High delay between scroll steps */
+            time-to-max-speed-ms = <0>;    /* Instant fixed minimum speed */
+            acceleration-exponent = <0>; /* No linear speed buildup */
+        };
+
+        /* Ultra-slow mouse cursor movement for sniping layer */
+        mmv_snipe: mouse_move_snipe {
+            compatible = "zmk,behavior-input-two-axis";
+            #binding-cells = <1>;
+            trigger-period-ms = <30>;      /* Precision cursor stepping */
+            time-to-max-speed-ms = <0>;
+            acceleration-exponent = <0>;
         };
     };
 
@@ -24,7 +41,7 @@ f/*
         compatible = "zmk,combos";
 
         /* ================================================================== */
-        /*                       BASE LAYER (LAYER 0) COMBOS                  */
+        /*                  BASE LAYER (LAYER 0) COMBOS                       */
         /* ================================================================== */
 
         combo_minus {
@@ -167,7 +184,7 @@ f/*
             bindings = <&kp DEL>;
         };
 
-        /* One-Shot Modifiers (Triggered via R [pos 28] + M / T / S / D) */
+        /* One-Shot Modifiers */
 
         combo_osm_shift_right {
             timeout-ms = <50>;
@@ -272,7 +289,7 @@ f/*
         };
 
         /* ================================================================== */
-        /*                LAYER 3 (NUMPAD) COMBOS - RIGHT HAND                */
+        /*                 LAYER 3 (NUMPAD) COMBOS - RIGHT HAND               */
         /* ================================================================== */
 
         combo_l2_n7_rh {
@@ -398,7 +415,7 @@ f/*
     };
 
     /* ================================================================== */
-    /*                              KEYMAP                                */
+    /*                               KEYMAP                               */
     /* ================================================================== */
 
     keymap {
@@ -417,10 +434,10 @@ f/*
         mouse_layer {
             label = "MOUSE";
             bindings = <
-       &none  &kp HOME        &msc SCRL_DOWN  &kp END          &none    &none      &msc SCRL_DOWN  &mmv MOVE_UP    &msc SCRL_UP     &none
-       &to 0  &msc MOVE_LEFT  &msc SCRL_UP    &msc MOVE_RIGHT  &none    &none      &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &mo 2
-&none  &none  &none           &none           &none            &none    &none      &none           &none           &none            &none  &none
-                              &mo 2           &mo 3            &mo 2    &mkp LCLK  &mkp RCLK       &none
+       &none  &kp HOME        &msc SCRL_DOWN  &kp END          &none    &none     &msc SCRL_DOWN  &mmv MOVE_UP    &msc SCRL_UP     &none
+       &to 0  &msc MOVE_LEFT  &msc SCRL_UP    &msc MOVE_RIGHT  &none    &none     &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &mo 2
+&none  &none  &none           &none           &none            &none    &none     &none           &none           &none            &none  &none
+                              &mo 2           &mo 3            &mo 2    &mkp LCLK &mkp RCLK       &none
             >;
         };
 
@@ -459,7 +476,7 @@ f/*
             bindings = <
        &none     &kp F4  &kp F5        &kp F6     &none        &none          &kp F12     &kp F11     &kp F10  &none
        &kp LGUI  &kp F1  &kp F2        &kp F3     &none        &none          &kp F9      &kp F8      &kp F7   &kp ESC
-&none  &none     &none   &none         &none      &none        &none          &none       &none       &none    &none    &none
+&none  &none     &none   &none         &none      &none        &none          &none       &none       &none    &none  &none
                          &kp LEFT_ALT  &kp LCTRL  &kp LSHFT    &kp BACKSPACE  &kp DELETE  &kp ESCAPE
             >;
         };
@@ -507,10 +524,10 @@ f/*
         sniping_layer {
             label = "SNIPING";
             bindings = <
-        &trans  &trans  &trans  &trans  &trans    &trans  &msc SCRL_DOWN  &mmv MOVE_UP    &msc SCRL_UP     &trans
-        &trans  &trans  &trans  &trans  &trans    &trans  &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &mkp LCLK
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans          &trans          &trans           &trans     &trans
-                        &trans  &trans  &trans    &trans  &trans          &trans
+        &trans  &trans  &trans  &trans  &trans    &trans  &msc_snipe SCRL_DOWN  &mmv_snipe MOVE_UP    &msc_snipe SCRL_UP     &trans
+        &trans  &trans  &trans  &trans  &trans    &trans  &mmv_snipe MOVE_LEFT  &mmv_snipe MOVE_DOWN  &mmv_snipe MOVE_RIGHT  &mkp LCLK
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans                &trans                &trans                 &trans  &trans
+                        &trans  &trans  &trans    &trans  &trans                &trans
             >;
         };
     };
