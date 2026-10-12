@@ -19,27 +19,40 @@
             bindings = <&mkp LCLK>, <&mkp MCLK>;
         };
 
-        /* Custom ultra-slow mouse movement for sniping */
+        /* Precision low-speed mouse movement */
         mmv_snipe: mmv_snipe {
             compatible = "zmk,behavior-input-two-axis";
             #binding-cells = <1>;
-            trigger-period-ms = <30>;
+            trigger-period-ms = <12>;
             time-to-max-speed-ms = <0>;
             acceleration-exponent = <0>;
             x-input-code = <INPUT_REL_X>;
             y-input-code = <INPUT_REL_Y>;
+            bindings = <&mmv_override>;
         };
 
-        /* Custom slow scroll for sniping */
+        /* Precision low-speed mouse scrolling */
         msc_snipe: msc_snipe {
             compatible = "zmk,behavior-input-two-axis";
             #binding-cells = <1>;
-            trigger-period-ms = <100>;
+            trigger-period-ms = <80>;
             time-to-max-speed-ms = <0>;
             acceleration-exponent = <0>;
             x-input-code = <INPUT_REL_HWHEEL>;
             y-input-code = <INPUT_REL_WHEEL>;
+            bindings = <&msc_override>;
         };
+    };
+
+    /* Linking pointing overrides */
+    mmv_override: mmv_override {
+        compatible = "zmk,behavior-point-to-quint";
+        #binding-cells = <0>;
+    };
+
+    msc_override: msc_override {
+        compatible = "zmk,behavior-point-to-quint";
+        #binding-cells = <0>;
     };
 
     combos {
