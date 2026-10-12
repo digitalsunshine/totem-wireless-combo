@@ -390,6 +390,12 @@
             key-positions = <16 7 18>;
             layers = <0>;
         };
+
+        combo_nav-toggle {
+            bindings = <&to 2>;
+            key-positions = <2 11 13>;
+            layers = <0>;
+        };
     };
 
     /* ================================================================== */
@@ -405,7 +411,7 @@
        &none     &kp P     &kp O        &kp U      &none          &none     &kp K           &kp L         &kp D            &none
        &lt 1 I   &kp N     &kp E        &kp A      &none          &none     &kp M           &kp T         &kp S            &lt 2 R
 &none  &kp DOWN  &kp LEFT  &kp UP       &kp RIGHT  &none          &none     &mmv MOVE_LEFT  &mmv MOVE_UP  &mmv MOVE_RIGHT  &mmv MOVE_DOWN  &none
-                           &lt 4 ENTER  &lt 4 TAB  &lt 2 SPACE    &kp BSPC  &lt 4 DEL       &td0
+                           &lt 4 ENTER  &lt 3 TAB  &lt 2 SPACE    &kp BSPC  &lt 3 DEL       &lt 4 LA(K)
             >;
         };
 
@@ -422,10 +428,10 @@
         nav_media_layer {
             label = "NAV";
             bindings = <
-       &none              &kp PAGE_UP     &kp UP_ARROW    &kp PAGE_DOWN    &none     &none                    &bt BT_SEL 0         &bt BT_SEL 1            &bt BT_SEL 2  &none
-       &mt LEFT_GUI CAPS  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &none     &none                    &none                &none                   &none         &none
-&none  &none              &none           &none           &none            &none     &none                    &none                &none                   &none         &none  &none
-                                          &trans          &trans           &trans    &mt K_MUTE C_PLAY_PAUSE  &mt C_PREV C_VOL_DN  &mt C_NEXT C_VOLUME_UP
+       &none              &kp PAGE_UP     &kp UP_ARROW    &kp PAGE_DOWN    &none    &none                    &bt BT_SEL 0          &bt BT_SEL 1            &bt BT_SEL 2        &none
+       &mt LEFT_GUI CAPS  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &none    &none                    &mt LEFT_SHIFT LC(C)  &mt LCTRL LC(V)         &mt LEFT_ALT LC(X)  &none
+&none  &none              &none           &none           &none            &none    &none                    &none                 &none                   &none               &none  &none
+                                          &trans          &trans           &to 0    &mt K_MUTE C_PLAY_PAUSE  &mt C_PREV C_VOL_DN   &mt C_NEXT C_VOLUME_UP
             >;
         };
 
@@ -442,20 +448,20 @@
         sym_layer {
             label = "SYM";
             bindings = <
-       &none     &kp CARET  &kp PRCNT  &kp AMPS  &none     &none  &kp HASH  &kp AT    &kp COLON  &none
-       &kp CAPS  &kp LBKT   &kp RBKT   &kp BSLH  &none     &none  &kp RPAR  &kp LPAR  &kp SEMI   &none
-&none  &none     &none      &none      &none     &none     &none  &none     &none     &none      &none  &none
-                            &trans     &trans    &trans    &none  &none     &none
+       &none      &kp CARET  &kp PRCNT  &kp AMPS  &none     &none  &kp HASH  &kp AT    &kp COLON  &none
+       &kp TILDE  &kp LBKT   &kp RBKT   &kp BSLH  &none     &none  &kp RPAR  &kp LPAR  &kp SEMI   &none
+&none  &none      &none      &none      &none     &none     &none  &none     &none     &none      &none  &none
+                             &trans     &trans    &trans    &none  &none     &none
             >;
         };
 
         fn_layer {
             label = "FN";
             bindings = <
-       &none     &kp F4  &kp F5  &kp F6  &none     &none  &kp F12  &kp F11  &kp F10  &none
-       &kp LGUI  &kp F1  &kp F2  &kp F3  &none     &none  &kp F9   &kp F8   &kp F7   &none
-&none  &none     &none   &none   &none   &none     &none  &none    &none    &none    &none  &none
-                         &trans  &trans  &trans    &none  &none    &none
+       &none     &kp F4  &kp F5        &kp F6     &none        &none          &kp F12     &kp F11     &kp F10  &none
+       &kp LGUI  &kp F1  &kp F2        &kp F3     &none        &none          &kp F9      &kp F8      &kp F7   &kp ESC
+&none  &none     &none   &none         &none      &none        &none          &none       &none       &none    &none    &none
+                         &kp LEFT_ALT  &kp LCTRL  &kp LSHFT    &kp BACKSPACE  &kp DELETE  &kp ESCAPE
             >;
         };
 
@@ -487,6 +493,44 @@
 &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
                         &trans  &trans  &trans    &trans  &trans  &trans
             >;
+        };
+
+        misc4 {
+            bindings = <
+        &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
+        &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+                        &trans  &trans  &trans    &trans  &trans  &trans
+            >;
+        };
+    };
+
+    conditional_layers {
+        compatible = "zmk,conditional-layers";
+
+        function-layer {
+            if-layers = <3 4>;
+            then-layer = <5>;
+        };
+
+        misc1_layer {
+            if-layers = <2 3>;
+            then-layer = <6>;
+        };
+
+        misc2_layer {
+            if-layers = <1 2>;
+            then-layer = <7>;
+        };
+
+        misc3_layer {
+            if-layers = <1 3>;
+            then-layer = <8>;
+        };
+
+        misc4_layer {
+            if-layers = <1 4>;
+            then-layer = <9>;
         };
     };
 };
