@@ -1,4 +1,4 @@
-/*
+f/*
  * ZMK Keymap for Totem Split Keyboard (38 keys)
  * Customized with adjusted combo key positions & Layer 3 numpad combos.
  */
@@ -495,7 +495,8 @@
             >;
         };
 
-        misc4 {
+        misc4_layer {
+            label = "MISC4";
             bindings = <
         &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
         &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
