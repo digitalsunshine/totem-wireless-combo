@@ -188,6 +188,12 @@
             bindings = <&kp DEL>;
         };
 
+        combo_esc {
+            bindings = <&kp ESCAPE>;
+            key-positions = <1 10>;
+            layers = <0>;
+        };
+
         /* One-Shot Modifiers */
 
         combo_osm_shift_right {
@@ -214,6 +220,34 @@
         combo_osm_gui_right {
             timeout-ms = <50>;
             key-positions = <7 8>;
+            layers = <0>;
+            bindings = <&sk LGUI>;
+        };
+
+        combo_osm_shft_left {
+            bindings = <&sk LSHFT>;
+            key-positions = <13 12>;
+            timeout-ms = <50>;
+            layers = <0>;
+        };
+
+        combo_osm_alt_left {
+            bindings = <&sk LALT>;
+            key-positions = <3 2>;
+            timeout-ms = <50>;
+            layers = <0>;
+        };
+
+        combo_osm_ctrl_left {
+            bindings = <&sk LCTRL>;
+            key-positions = <12 11>;
+            timeout-ms = <50>;
+            layers = <0>;
+        };
+
+        combo_osm_gui_left {
+            timeout-ms = <50>;
+            key-positions = <1 2>;
             layers = <0>;
             bindings = <&sk LGUI>;
         };
@@ -366,32 +400,9 @@
             bindings = <&kp BSPC>;
         };
 
-        combo_osm_shft_left {
-            bindings = <&sk LSHFT>;
-            key-positions = <13 12>;
-            timeout-ms = <50>;
-            layers = <0>;
-        };
-
-        combo_osm_alt_left {
-            bindings = <&sk LALT>;
-            key-positions = <3 2>;
-            timeout-ms = <50>;
-            layers = <0>;
-        };
-
-        combo_osm_ctrl_left {
-            bindings = <&sk LCTRL>;
-            key-positions = <12 11>;
-            timeout-ms = <50>;
-            layers = <0>;
-        };
-
-        combo_esc {
-            bindings = <&kp ESCAPE>;
-            key-positions = <1 10>;
-            layers = <0>;
-        };
+        /* ================================================================== */
+        /*                            MISC COMBOS                             */
+        /* ================================================================== */
 
         combo_output_usb {
             bindings = <&out OUT_USB>;
