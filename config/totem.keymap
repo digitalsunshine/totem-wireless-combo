@@ -455,4 +455,139 @@
             label = "BASE";
             bindings = <
        &none     &kp P     &kp O          &kp U            &none            &none     &kp K           &kp L         &kp D            &none
-       &lt 1 I
+       &lt 1 I   &kp N     &kp E          &kp A            &none            &none     &kp M           &kp T         &kp S            &lt 2 R
+&none  &kp DOWN  &kp LEFT  &kp UP         &kp RIGHT        &none            &none     &mmv MOVE_LEFT  &mmv MOVE_UP  &mmv MOVE_RIGHT  &mmv MOVE_DOWN  &td0
+                           &lt 4 PAGE_UP  &lt 3 PAGE_DOWN  &lt 2 SPACE      &kp BSPC  &lt 3 DEL       &lt 4 K
+            >;
+        };
+
+        mouse_layer {
+            label = "MOUSE";
+            bindings = <
+       &none  &kp HOME        &msc SCRL_UP    &kp END          &none    &none     &msc SCRL_DOWN  &mmv MOVE_UP    &msc SCRL_UP     &none
+       &to 0  &msc MOVE_LEFT  &msc SCRL_DOWN  &msc MOVE_RIGHT  &none    &none     &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &mo 2
+&none  &none  &none           &none           &none            &none    &none     &none           &none           &none            &none  &none
+                              &mo 4           &mo 3            &mo 2    &td0      &mkp RCLK       &lt 10 DELETE
+            >;
+        };
+
+        nav_media_layer {
+            label = "NAV";
+            bindings = <
+       &none              &kp PAGE_UP     &kp UP_ARROW        &kp PAGE_DOWN    &none              &none                    &bt BT_SEL 0          &bt BT_SEL 1            &bt BT_SEL 2        &none
+       &mt LEFT_GUI CAPS  &kp LEFT_ARROW  &kp DOWN_ARROW      &kp RIGHT_ARROW  &none              &none                    &mt LEFT_SHIFT LC(C)  &mt LCTRL LC(V)         &mt LEFT_ALT LC(X)  &to 0
+&none  &none              &none           &none               &none            &none              &none                    &none                 &none                   &none               &none  &none
+                                          &mt LEFT_ALT ENTER  &mt LCTRL TAB    &mt LSHFT SPACE    &mt C_MUTE C_PLAY_PAUSE  &mt C_PREV C_VOL_DN   &mt C_NEXT C_VOLUME_UP
+            >;
+        };
+
+        num_layer {
+            label = "NUM";
+            bindings = <
+       &none    &kp N4  &kp N5  &kp N6  &none    &none  &kp N4  &kp N5  &kp N6  &none
+       &kp DOT  &kp N1  &kp N2  &kp N3  &none    &none  &kp N1  &kp N2  &kp N3  &kp DOT
+&none  &none    &none   &none   &none   &none    &none  &none   &none   &none   &none    &none
+                        &none   &none   &none    &none  &none   &none
+            >;
+        };
+
+        sym_layer {
+            label = "SYM";
+            bindings = <
+       &none      &kp CARET  &kp PRCNT  &kp AMPS           &none     &none  &kp DQT   &kp AT    &kp HASH  &none
+       &kp TILDE  &kp BSLH   &kp LBKT   &kp RIGHT_BRACKET  &none     &none  &kp APOS  &kp COLON &kp SEMI  &kp ESC
+&none  &none      &none      &none      &none              &none     &none  &none     &none     &none     &none  &none
+                             &trans     &trans             &trans    &none  &none     &none
+            >;
+        };
+
+        fn_layer {
+            label = "FN";
+            bindings = <
+       &none            &kp F4  &kp F5        &kp F6     &none     &none   &kp F12  &kp F11  &kp F10  &none
+       &mt LGUI ESCAPE  &kp F1  &kp F2        &kp F3     &none     &none   &kp F9   &kp F8   &kp F7   &lt 10 ENTER
+&none  &none            &none   &none         &none      &none     &none   &none    &none    &none    &none        &none
+                                &kp LEFT_ALT  &kp LCTRL  &kp LSHFT &trans  &trans   &trans
+            >;
+        };
+
+        misc1_layer {
+            label = "MISC1";
+            bindings = <
+       &none  &none  &none   &none   &none     &none  &none  &none  &none  &none
+       &none  &none  &none   &none   &none     &none  &none  &none  &none  &none
+&none  &none  &none  &none   &none   &none     &none  &none  &none  &none  &none  &none
+                     &trans  &trans  &trans    &none  &none  &none
+            >;
+        };
+
+        misc2_layer {
+            label = "MISC2";
+            bindings = <
+       &none  &none  &none   &none   &none     &none  &none  &none  &none  &none
+       &none  &none  &none   &none   &none     &none  &none  &none  &none  &none
+&none  &none  &none  &none   &none   &none     &none  &none  &none  &none  &none  &none
+                     &trans  &trans  &trans    &none  &none  &none
+            >;
+        };
+
+        misc3_layer {
+            label = "MISC3";
+            bindings = <
+        &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
+        &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+                        &trans  &trans  &trans    &trans  &trans  &trans
+            >;
+        };
+
+        misc4_layer {
+            label = "MISC4";
+            bindings = <
+        &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
+        &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+                        &trans  &trans  &trans    &trans  &trans  &trans
+            >;
+        };
+
+        sniping_layer {
+            label = "SNIPING";
+            bindings = <
+        &trans  &trans  &trans  &trans  &trans    &trans  &bt BT_CLR      &bt BT_CLR      &bt BT_CLR       &trans
+        &trans  &trans  &trans  &trans  &trans    &trans  &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &mkp LCLK
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans          &trans          &trans           &trans  &trans
+                        &trans  &trans  &trans    &trans  &trans          &trans
+            >;
+        };
+    };
+
+    conditional_layers {
+        compatible = "zmk,conditional-layers";
+
+        function-layer {
+            if-layers = <3 4>;
+            then-layer = <5>;
+        };
+
+        misc1_layer {
+            if-layers = <2 3>;
+            then-layer = <6>;
+        };
+
+        misc2_layer {
+            if-layers = <1 2>;
+            then-layer = <7>;
+        };
+
+        misc3_layer {
+            if-layers = <1 3>;
+            then-layer = <8>;
+        };
+
+        misc4_layer {
+            if-layers = <1 4>;
+            then-layer = <9>;
+        };
+    };
+};
