@@ -431,6 +431,18 @@
             key-positions = <4 14>;
             layers = <0>;
         };
+
+        combo-leftbracket {
+            bindings = <&kp LEFT_PARENTHESIS>;
+            key-positions = <1 11>;
+            layers = <0>;
+        };
+
+        combo-rightbracket {
+            bindings = <&kp RIGHT_PARENTHESIS>;
+            key-positions = <8 18>;
+            layers = <0>;
+        };
     };
 
     /* ================================================================== */
