@@ -425,6 +425,12 @@
             key-positions = <35 34>;
             layers = <0>;
         };
+
+        combo-tab {
+            bindings = <&kp TAB>;
+            key-positions = <4 14>;
+            layers = <0>;
+        };
     };
 
     /* ================================================================== */
@@ -437,18 +443,18 @@
         base_layer {
             label = "BASE";
             bindings = <
-       &none     &kp P     &kp O        &kp U      &none          &none     &kp K           &kp L         &kp D            &none
-       &lt 1 I   &kp N     &kp E        &kp A      &none          &none     &kp M           &kp T         &kp S            &lt 2 R
-&none  &kp DOWN  &kp LEFT  &kp UP       &kp RIGHT  &none          &none     &mmv MOVE_LEFT  &mmv MOVE_UP  &mmv MOVE_RIGHT  &mmv MOVE_DOWN  &none
-                           &lt 4 ENTER  &lt 3 TAB  &lt 2 SPACE    &kp BSPC  &lt 3 DEL       &lt 4 LA(K)
+       &none     &kp P     &kp O          &kp U            &none          &none     &kp K           &kp L         &kp D            &none
+       &lt 1 I   &kp N     &kp E          &kp A            &none          &none     &kp M           &kp T         &kp S            &lt 2 R
+&none  &kp DOWN  &kp LEFT  &kp UP         &kp RIGHT        &none          &none     &mmv MOVE_LEFT  &mmv MOVE_UP  &mmv MOVE_RIGHT  &mmv MOVE_DOWN  &none
+                           &lt 4 PAGE_UP  &lt 3 PAGE_DOWN  &lt 2 SPACE    &kp BSPC  &lt 3 DEL       &lt 4 LA(K)
             >;
         };
 
         mouse_layer {
             label = "MOUSE";
             bindings = <
-       &none  &kp HOME        &msc SCRL_UP  &kp END          &none    &none  &msc SCRL_DOWN  &mmv MOVE_UP    &msc SCRL_UP     &none
-       &to 0  &msc MOVE_LEFT  &msc SCRL_DOWN    &msc MOVE_RIGHT  &none    &none  &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &mo 2
+       &none  &kp HOME        &msc SCRL_UP    &kp END          &none    &none  &msc SCRL_DOWN  &mmv MOVE_UP    &msc SCRL_UP     &none
+       &to 0  &msc MOVE_LEFT  &msc SCRL_DOWN  &msc MOVE_RIGHT  &none    &none  &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &mo 2
 &none  &none  &none           &none           &none            &none    &none  &none           &none           &none            &none  &none
                               &mo 2           &mo 3            &mo 2    &td0   &mkp RCLK       &lt 10 DELETE
             >;
