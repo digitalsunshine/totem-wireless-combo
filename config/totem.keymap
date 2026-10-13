@@ -428,19 +428,19 @@
 
         combo-tab {
             bindings = <&kp TAB>;
-            key-positions = <4 14>;
+            key-positions = <3 13>;
             layers = <0>;
         };
 
         combo-leftbracket {
             bindings = <&kp LEFT_PARENTHESIS>;
-            key-positions = <1 11>;
+            key-positions = <2 12>;
             layers = <0>;
         };
 
         combo-rightbracket {
             bindings = <&kp RIGHT_PARENTHESIS>;
-            key-positions = <8 18>;
+            key-positions = <7 17>;
             layers = <0>;
         };
     };
