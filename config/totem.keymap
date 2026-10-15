@@ -455,20 +455,20 @@
         base_layer {
             label = "BASE";
             bindings = <
-       &none     &kp P     &kp O          &kp U            &none          &none     &kp K           &kp L         &kp D            &none
-       &lt 1 I   &kp N     &kp E          &kp A            &none          &none     &kp M           &kp T         &kp S            &lt 2 R
-&none  &kp DOWN  &kp LEFT  &kp UP         &kp RIGHT        &none          &none     &mmv MOVE_LEFT  &mmv MOVE_UP  &mmv MOVE_RIGHT  &mmv MOVE_DOWN  &td0
-                           &lt 4 PAGE_UP  &lt 3 PAGE_DOWN  &lt 2 SPACE    &kp BSPC  &lt 3 DEL       &lt 4 K
+       &none     &kp P     &kp O          &kp U            &none        &none     &kp K           &kp L         &kp D            &none
+       &lt 1 I   &kp N     &kp E          &kp A            &none        &none     &kp M           &kp T         &kp S            &lt 2 R
+&none  &kp DOWN  &kp LEFT  &kp UP         &kp RIGHT        &none        &none     &mmv MOVE_LEFT  &mmv MOVE_UP  &mmv MOVE_RIGHT  &mmv MOVE_DOWN  &td0
+                           &lt 4 PAGE_UP  &lt 3 PAGE_DOWN  &kp SPACE    &kp BSPC  &lt 3 DEL       &lt 4 K
             >;
         };
 
         mouse_layer {
             label = "MOUSE";
             bindings = <
-       &none  &kp HOME        &msc SCRL_UP    &kp END          &none    &none  &msc SCRL_DOWN  &mmv MOVE_UP    &msc SCRL_UP     &none
-       &to 0  &msc MOVE_LEFT  &msc SCRL_DOWN  &msc MOVE_RIGHT  &none    &none  &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &mo 2
-&none  &none  &none           &none           &none            &none    &none  &none           &none           &none            &none  &none
-                              &mo 4           &mo 3            &mo 2    &td0   &mkp RCLK       &lt 10 DELETE
+       &none  &mt LEFT_CONTROL HOME  &msc SCRL_UP    &mt LEFT_SHIFT END  &none    &none  &msc SCRL_DOWN  &mmv MOVE_UP    &msc SCRL_UP     &none
+       &to 0  &msc MOVE_LEFT         &msc SCRL_DOWN  &msc MOVE_RIGHT     &none    &none  &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &mo 2
+&none  &none  &none                  &none           &none               &none    &none  &none           &none           &none            &none  &none
+                                     &mo 4           &mo 3               &mo 2    &td0   &mkp RCLK       &lt 10 DELETE
             >;
         };
 
@@ -555,10 +555,10 @@
         sniping_layer {
             label = "SNIPING";
             bindings = <
-        &trans  &trans  &trans  &trans  &trans    &trans  &bt BT_CLR      &bt BT_CLR      &bt BT_CLR       &trans
-        &trans  &trans  &trans  &trans  &trans    &trans  &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &mkp LCLK
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans          &trans          &trans           &trans     &trans
-                        &trans  &trans  &trans    &trans  &trans          &trans
+        &trans  &trans  &trans  &trans  &trans    &trans  &bt BT_CLR  &bt BT_CLR  &bt BT_CLR  &trans
+        &trans  &trans  &trans  &trans  &trans    &trans  &none       &none       &none       &none
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans      &trans      &trans      &trans  &trans
+                        &trans  &trans  &trans    &trans  &trans      &trans
             >;
         };
     };
@@ -577,7 +577,7 @@
         };
 
         misc2_layer {
-            if-layers = <1 2>;
+            if-layers = <2 4>;
             then-layer = <7>;
         };
 
