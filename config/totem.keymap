@@ -19,18 +19,6 @@
             bindings = <&mkp RCLK>, <&mkp MCLK>;
         };
 
-        /* Custom horizontal scroll with slowed repeat rate to prevent skipping */
-        msc_horiz: msc_horiz {
-            compatible = "zmk,behavior-input-two-axis";
-            #binding-cells = <1>;
-            trigger-period-ms = <120>;
-            time-to-max-speed-ms = <0>;
-            acceleration-exponent = <0>;
-            x-input-code = <INPUT_REL_HWHEEL>;
-            y-input-code = <0>;
-        };
-    };
-
     combos {
         compatible = "zmk,combos";
 
@@ -462,7 +450,7 @@
             label = "MOUSE";
             bindings = <
        &none  &mt LEFT_CONTROL LC(Z)  &msc SCRL_UP          &mt LEFT_SHIFT LC(Y)   &none          &none      &msc SCRL_DOWN  &mmv MOVE_UP    &msc SCRL_UP     &none
-       &to 0  &msc_horiz MOVE_LEFT    &msc SCRL_DOWN        &msc_horiz MOVE_RIGHT  &none          &none      &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &mo 2
+       &to 0  &msc SCRL_LEFT          &msc SCRL_DOWN        &msc SCRL_RIGHT        &none          &none      &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &mo 2
 &none  &none  &none                   &none                 &none                  &none          &none      &none           &none           &none            &none  &none
                                       &lt 2 LA(LEFT_ARROW)  &lt 3 LA(RIGHT_ARROW)  &kp LA(TAB)    &mkp LCLK  &td0            &lt 5 DELETE
             >;
@@ -551,10 +539,10 @@
         boot_layer {
             label = "boot";
             bindings = <
-        &trans  &trans  &trans  &trans  &trans    &trans  &bt BT_CLR  &bt BT_CLR  &bt BT_CLR  &trans
-        &trans  &trans  &trans  &trans  &trans    &trans  &studio_unlock       &none       &none       &none
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans      &trans      &trans      &trans  &trans
-                        &trans  &trans  &trans    &trans  &trans      &trans
+        &trans  &trans  &trans  &trans  &trans    &trans  &bt BT_CLR        &bt BT_CLR  &bt BT_CLR  &trans
+        &trans  &trans  &trans  &trans  &trans    &trans  &studio_unlock    &none       &none       &none
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans            &trans      &trans      &trans  &trans
+                        &trans  &trans  &trans    &trans  &trans            &trans
             >;
         };
     };
