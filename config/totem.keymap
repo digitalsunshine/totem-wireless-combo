@@ -323,13 +323,6 @@
             bindings = <&kp ASTRK>;
         };
 
-        combo_l2_bspc_lh {
-            timeout-ms = <50>;
-            key-positions = <10 1>;
-            layers = <3>;
-            bindings = <&kp BSPC>;
-        };
-
         /* ================================================================== */
         /*                 LAYER 3 (NUMPAD) COMBOS - RIGHT HAND               */
         /* ================================================================== */
@@ -395,13 +388,6 @@
             key-positions = <7 19>;
             layers = <3>;
             bindings = <&kp ASTRK>;
-        };
-
-        combo_l2_bspc_rh {
-            timeout-ms = <50>;
-            key-positions = <8 19>;
-            layers = <3>;
-            bindings = <&kp BSPC>;
         };
 
         /* ================================================================== */
@@ -475,10 +461,10 @@
         nav_media_layer {
             label = "NAV";
             bindings = <
-       &none              &mt LC(LS(PAGE_UP)) RC(PAGE_UP)  &kp UP_ARROW             &mt LC(LS(PAGE_DOWN)) LC(PAGE_DOWN)  &none                      &none                     &bt BT_SEL 0             &bt BT_SEL 1         &bt BT_SEL 2     &none
-       &mt LEFT_GUI CAPS  &kp LEFT_ARROW                   &kp DOWN_ARROW           &kp RIGHT_ARROW                      &none                      &none                     &mt LC(X) LC(C)          &mt LC(LS(V)) LC(V)  &mt LC(A) LC(D)  &to 0
-&none  &none              &none                            &none                    &none                                &none                      &none                     &none                    &none                &none            &none  &none
-                                                           &mt C_PREVIOUS C_VOL_DN  &mt C_NEXT C_VOL_UP                  &mt C_MUTE C_PLAY_PAUSE    &mt LEFT_SHIFT BACKSPACE  &mt LEFT_CONTROL DELETE  &mt LEFT_ALT ENTER
+       &none              &mt LC(LS(PAGE_UP)) RC(PAGE_UP)  &kp UP_ARROW             &mt LC(LS(PAGE_DOWN)) LC(PAGE_DOWN)  &none                      &none                     &bt BT_SEL 0             &bt BT_SEL 1              &bt BT_SEL 2     &none
+       &mt LEFT_GUI CAPS  &kp LEFT_ARROW                   &kp DOWN_ARROW           &kp RIGHT_ARROW                      &none                      &none                     &mt LC(X) LC(C)          &mt LC(LS(V)) LC(V)       &mt LC(A) LC(D)  &to 0
+&none  &none              &none                            &none                    &none                                &none                      &none                     &none                    &none                     &none            &none  &none
+                                                           &mt C_PREVIOUS C_VOL_DN  &mt C_NEXT C_VOL_UP                  &mt C_MUTE C_PLAY_PAUSE    &mt LEFT_SHIFT BACKSPACE  &mt LEFT_CONTROL DELETE  &mt LEFT_ALT PRINTSCREEN
             >;
         };
 
