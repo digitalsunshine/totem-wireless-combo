@@ -491,8 +491,8 @@
         fn_layer {
             label = "FN";
             bindings = <
-       &none            &kp F4  &kp F5        &kp F6     &none        &none   &kp F12  &kp F11  &kp F10  &none
-       &mt LGUI ESCAPE  &kp F1  &kp F2        &kp F3     &none        &none   &kp F9   &kp F8   &kp F7   &lt 10 ENTER
+       &none            &kp F4  &kp F5        &kp F6     &none        &none   &kp F10  &kp F11  &kp F12  &none
+       &mt LGUI ESCAPE  &kp F1  &kp F2        &kp F3     &none        &none   &kp F7   &kp F8   &kp F9   &lt 10 ENTER
 &none  &none            &none   &none         &none      &none        &none   &none    &none    &none    &none         &none
                                 &kp LEFT_ALT  &kp LCTRL  &kp LSHFT    &trans  &trans   &trans
             >;
