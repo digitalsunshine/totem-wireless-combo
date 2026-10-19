@@ -482,8 +482,8 @@
             label = "SYM";
             bindings = <
        &none      &kp CARET  &kp PRCNT  &kp AMPS           &none     &none  &kp DQT   &kp AT     &kp HASH  &none
-       &kp TILDE  &kp BSLH   &kp LBKT   &kp RIGHT_BRACKET  &none     &none  &kp APOS  &kp COLON  &kp SEMI  &kp ESC
-&none  &none      &none      &none      &none              &none     &none  &none     &none      &none     &none    &none
+       &kp TILDE  &kp BSLH   &kp LBKT   &kp RIGHT_BRACKET  &none     &none  &kp APOS  &kp COLON  &kp SEMI  &kp DOLLAR
+&none  &none      &none      &none      &none              &none     &none  &none     &none      &none     &none       &none
                              &trans     &trans             &trans    &none  &none     &none
             >;
         };
@@ -573,7 +573,7 @@
         };
 
         misc4_layer {
-            if-layers = <1 4>;
+            if-layers = <1 2>;
             then-layer = <9>;
         };
     };
