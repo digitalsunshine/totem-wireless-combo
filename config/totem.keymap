@@ -468,7 +468,7 @@
        &none  &mt LEFT_CONTROL LC(Z)  &msc SCRL_UP          &mt LEFT_SHIFT LC(Y)   &none            &none      &msc SCRL_DOWN  &mmv MOVE_UP    &msc SCRL_UP     &none
        &to 0  &msc MOVE_LEFT          &msc SCRL_DOWN        &msc MOVE_RIGHT        &none            &none      &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &mo 2
 &none  &none  &none                   &none                 &none                  &none            &none      &none           &none           &none            &none  &none
-                                      &lt 4 LA(LEFT_ARROW)  &lt 3 LA(RIGHT_ARROW)  &lt 2 LA(TAB)    &mkp LCLK  &td0            &lt 10 DELETE
+                                      &lt 2 LA(LEFT_ARROW)  &lt 3 LA(RIGHT_ARROW)  &lt 2 LA(TAB)    &mkp LCLK  &td0            &lt 10 DELETE
             >;
         };
 
