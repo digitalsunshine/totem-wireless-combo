@@ -24,6 +24,8 @@
             compatible = "zmk,behavior-input-two-axis";
             #binding-cells = <1>;
             trigger-period-ms = <120>;
+            time-to-max-speed-ms = <0>;
+            acceleration-exponent = <0>;
             x-input-code = <INPUT_REL_HWHEEL>;
             y-input-code = <0>;
         };
