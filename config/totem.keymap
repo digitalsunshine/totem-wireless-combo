@@ -429,6 +429,12 @@
             key-positions = <7 18>;
             layers = <2>;
         };
+
+        combo_enter {
+            bindings = <&kp TAB>;
+            key-positions = <6 16>;
+            layers = <0>;
+        };
     };
 
     /* ================================================================== */
