@@ -431,7 +431,7 @@
         };
 
         combo_enter {
-            bindings = <&kp TAB>;
+            bindings = <&kp ENTER>;
             key-positions = <6 16>;
             layers = <0>;
         };
