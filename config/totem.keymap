@@ -12,6 +12,7 @@
 / {
     behaviors {
         /* Tap Dance 0: Single Tap = Right Click, Double Tap = Middle Click */
+
         td0: tap_dance_0 {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
@@ -440,10 +441,10 @@
         base_layer {
             label = "BASE";
             bindings = <
-       &none     &kp P     &kp O          &kp U            &none            &none     &kp K           &kp L         &kp D            &none
-       &lt 1 I   &kp N     &kp E          &kp A            &none            &none     &kp M           &kp T         &kp S            &lt 2 R
-&none  &kp DOWN  &kp LEFT  &kp UP         &kp RIGHT        &none            &none     &mmv MOVE_LEFT  &mmv MOVE_UP  &mmv MOVE_RIGHT  &mmv MOVE_DOWN  &td0
-                           &lt 2 PAGE_UP  &lt 3 PAGE_DOWN  &kp SPACE        &kp BSPC  &lt 3 DEL       &lt 4 K
+       &none     &kp P     &kp O          &kp U            &none        &none     &kp K           &kp L         &kp D            &none
+       &lt 1 I   &kp N     &kp E          &kp A            &none        &none     &kp M           &kp T         &kp S            &lt 2 R
+&none  &kp DOWN  &kp LEFT  &kp UP         &kp RIGHT        &none        &none     &mmv MOVE_LEFT  &mmv MOVE_UP  &mmv MOVE_RIGHT  &mmv MOVE_DOWN  &td0
+                           &lt 2 PAGE_UP  &lt 3 PAGE_DOWN  &kp SPACE    &kp BSPC  &lt 3 DEL       &lt 4 K
             >;
         };
 
@@ -460,10 +461,10 @@
         nav_media_layer {
             label = "NAV";
             bindings = <
-       &none              &mt LC(LS(PAGE_UP)) RC(PAGE_UP)  &kp UP_ARROW             &mt LC(LS(PAGE_DOWN)) LC(PAGE_DOWN)  &none                      &none                     &bt BT_SEL 0              &bt BT_SEL 1              &bt BT_SEL 2        &none
-       &mt LEFT_GUI CAPS  &kp LEFT_ARROW                   &kp DOWN_ARROW           &kp RIGHT_ARROW                      &none                      &none                     &mt LC(X) LC(C)           &mt LC(LS(V)) LC(V)       &mt LC(A) LC(D)     &to 0
-&none  &none              &none                            &none                    &none                                &none                      &none                     &none                     &none                     &none               &none  &none
-                                                           &mt C_PREVIOUS C_VOL_DN  &mt C_NEXT C_VOL_UP                  &mt C_MUTE C_PLAY_PAUSE    &mt LEFT_SHIFT BACKSPACE  &mt LEFT_CONTROL DELETE   &mt LEFT_ALT PRINTSCREEN
+       &none              &mt LC(LS(PAGE_UP)) RC(PAGE_UP)  &kp UP_ARROW             &mt LC(LS(PAGE_DOWN)) LC(PAGE_DOWN)  &none                      &none                     &bt BT_SEL 0             &bt BT_SEL 1              &bt BT_SEL 2     &none
+       &mt LEFT_GUI CAPS  &kp LEFT_ARROW                   &kp DOWN_ARROW           &kp RIGHT_ARROW                      &none                      &none                     &mt LC(X) LC(C)          &mt LC(LS(V)) LC(V)       &mt LC(A) LC(D)  &to 0
+&none  &none              &none                            &none                    &none                                &none                      &none                     &none                    &none                     &none            &none  &none
+                                                           &mt C_PREVIOUS C_VOL_DN  &mt C_NEXT C_VOL_UP                  &mt C_MUTE C_PLAY_PAUSE    &mt LEFT_SHIFT BACKSPACE  &mt LEFT_CONTROL DELETE  &mt LEFT_ALT PRINTSCREEN
             >;
         };
 
@@ -480,9 +481,9 @@
         sym_layer {
             label = "SYM";
             bindings = <
-       &none      &kp CARET  &kp PRCNT  &kp AMPS           &none     &none  &kp DQT   &kp AT    &kp HASH  &none
-       &kp TILDE  &kp BSLH   &kp LBKT   &kp RIGHT_BRACKET  &none     &none  &kp APOS  &kp COLON &kp SEMI  &kp DOLLAR
-&none  &none      &none      &none      &none              &none     &none  &none     &none     &none     &none       &none
+       &none      &kp CARET  &kp PRCNT  &kp AMPS           &none     &none  &kp DQT   &kp AT     &kp HASH  &none
+       &kp TILDE  &kp BSLH   &kp LBKT   &kp RIGHT_BRACKET  &none     &none  &kp APOS  &kp COLON  &kp SEMI  &kp DOLLAR
+&none  &none      &none      &none      &none              &none     &none  &none     &none      &none     &none       &none
                              &trans     &trans             &trans    &none  &none     &none
             >;
         };
@@ -490,20 +491,20 @@
         fn_layer {
             label = "FN";
             bindings = <
-       &none            &kp F4  &kp F5        &kp F6     &none     &none   &kp F10  &kp F11  &kp F12  &none
-       &mt LGUI ESCAPE  &kp F1  &kp F2        &kp F3     &none     &none   &kp F7   &kp F8   &kp F9   &lt 10 ENTER
-&none  &none            &none   &none         &none      &none     &none   &none    &none    &none    &none        &none
-                                &kp LEFT_ALT  &kp LCTRL  &kp LSHFT &trans  &trans   &trans
+       &none            &kp F4  &kp F5        &kp F6     &none        &none   &kp F10  &kp F11  &kp F12  &none
+       &mt LGUI ESCAPE  &kp F1  &kp F2        &kp F3     &none        &none   &kp F7   &kp F8   &kp F9   &lt 10 ENTER
+&none  &none            &none   &none         &none      &none        &none   &none    &none    &none    &none         &none
+                                &kp LEFT_ALT  &kp LCTRL  &kp LSHFT    &trans  &trans   &trans
             >;
         };
 
         misc1_layer {
             label = "MISC1";
             bindings = <
-       &none  &none  &none   &none   &none     &none  &none  &none  &none  &none
-       &none  &none  &none   &none   &none     &none  &none  &none  &none  &none
-&none  &none  &none  &none   &none   &none     &none  &none  &none  &none  &none  &none
-                     &trans  &trans  &trans    &none  &none  &none
+       &none      &none            &none                &none            &none     &none  &none  &none  &none  &none
+       &kp ENTER  &mt LC(X) LC(C)  &mt LC(LS(V)) LC(V)  &mt LC(D) LC(A)  &none     &none  &none  &none  &none  &none
+&none  &none      &none            &none                &none            &none     &none  &none  &none  &none  &none  &none
+                                   &trans               &trans           &trans    &none  &none  &none
             >;
         };
 
@@ -540,10 +541,10 @@
         boot_layer {
             label = "boot";
             bindings = <
-        &trans  &trans  &trans  &trans  &trans    &trans  &bt BT_CLR        &bt BT_CLR  &bt BT_CLR  &trans
-        &trans  &trans  &trans  &trans  &trans    &trans  &studio_unlock    &none       &none       &none
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans            &trans      &trans      &trans  &trans
-                        &trans  &trans  &trans    &trans  &trans            &trans
+        &trans  &trans  &trans  &trans  &trans    &trans  &bt BT_CLR      &bt BT_CLR  &bt BT_CLR  &trans
+        &trans  &trans  &trans  &trans  &trans    &trans  &studio_unlock  &none       &none       &none
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans          &trans      &trans      &trans  &trans
+                        &trans  &trans  &trans    &trans  &trans          &trans
             >;
         };
     };
