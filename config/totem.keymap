@@ -174,12 +174,6 @@
             layers = <0>;
         };
 
-        combo-enter {
-            bindings = <&kp ENTER>;
-            key-positions = <35 34>;
-            layers = <0>;
-        };
-
         combo-tab {
             bindings = <&kp TAB>;
             key-positions = <3 13>;
