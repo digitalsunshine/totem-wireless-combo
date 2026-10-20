@@ -471,10 +471,10 @@
         num_layer {
             label = "NUM";
             bindings = <
-       &none    &kp N4  &kp N5         &kp N6  &none    &none          &kp N4  &kp N5         &kp N6  &none
-       &kp DOT  &kp N1  &kp N2         &kp N3  &none    &none          &kp N1  &kp N2         &kp N3  &kp DOT
-&none  &none    &none   &none          &none   &none    &none          &none   &none          &none   &none    &none
-                        &kp BACKSPACE  &none   &none    &kp C_AL_CALC  &none   &kp BACKSPACE
+       &none      &kp LA(R)        &kp LA(M)            &mt LA(LS(K)) LA(K)  &none    &none          &kp N4  &kp N5         &kp N6  &none
+       &kp ENTER  &mt LC(X) LC(C)  &mt LC(LS(V)) LC(V)  &mt LC(A) LC(D)      &none    &none          &kp N1  &kp N2         &kp N3  &kp DOT
+&none  &none      &none            &none                &none                &none    &none          &none   &none          &none   &none    &none
+                                   &kp BACKSPACE        &none                &none    &kp C_AL_CALC  &none   &kp BACKSPACE
             >;
         };
 
