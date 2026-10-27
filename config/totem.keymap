@@ -13,11 +13,20 @@
     behaviors {
         /* Tap Dance 0: Single Tap = Right Click, Double Tap = Middle Click */
 
-        td0: tap_dance_0 {
+        td0: mouse_tap {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             tapping-term-ms = <170>;
             bindings = <&mkp RCLK>, <&mkp MCLK>;
+
+            label = "mouse_tap";
+        };
+
+        td1: neverclick {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TD1";
+            #binding-cells = <0>;
+            bindings = <&lt 4 LA(K)>, <&kp LA(LS(K))>;
         };
     };
 
