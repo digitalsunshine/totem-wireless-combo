@@ -28,6 +28,16 @@
             #binding-cells = <0>;
             bindings = <&lt 4 LA(K)>, <&kp LA(LS(K))>;
         };
+
+        /* Tap = Toggle to Layer 0 (BASE), Hold = Left GUI (Win/Cmd key) */
+
+        to_base_lgui: to_base_lgui {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            flavor = "hold-preferred";
+            tapping-term-ms = <200>;
+            bindings = <&kp>, <&to>;
+        };
     };
 
     combos {
@@ -383,10 +393,10 @@
         base_layer {
             label = "BASE";
             bindings = <
-       &none           &kp P     &kp O          &kp U            &none        &none     &kp K           &kp L         &kp D            &none
-       &lt 1 I         &kp N     &kp E          &kp A            &none        &none     &kp M           &kp T         &kp S            &lt 2 R
-&none  &kp DOWN_ARROW  &kp LEFT  &kp UP         &kp RIGHT        &none        &none     &mmv MOVE_LEFT  &mmv MOVE_UP  &mmv MOVE_RIGHT  &mmv MOVE_DOWN  &td0
-                                 &lt 3 PAGE_UP  &lt 2 PAGE_DOWN  &kp SPACE    &kp BSPC  &lt 3 DEL       &td1
+       &none           &kp P     &kp O          &kp U            &none            &none     &kp K           &kp L         &kp D            &none
+       &lt 1 I         &kp N     &kp E          &kp A            &none            &none     &kp M           &kp T         &kp S            &lt 2 R
+&none  &kp DOWN_ARROW  &kp LEFT  &kp UP         &kp RIGHT        &none            &none     &mmv MOVE_LEFT  &mmv MOVE_UP  &mmv MOVE_RIGHT  &mmv MOVE_DOWN  &td0
+                                 &lt 3 PAGE_UP  &lt 2 PAGE_DOWN  &kp SPACE        &kp BSPC  &lt 3 DEL       &td1
             >;
         };
 
@@ -403,30 +413,30 @@
         nav_media_layer {
             label = "NAV";
             bindings = <
-       &none           &mt LC(LS(PAGE_UP)) RC(PAGE_UP)  &mt HOME END     &mt LC(LS(PAGE_DOWN)) LC(PAGE_DOWN)  &none    &none                     &bt BT_SEL 0              &bt BT_SEL 1              &bt BT_SEL 2        &none
-       &kp DOWN_ARROW  &kp LEFT_ARROW                   &kp UP_ARROW     &kp RIGHT_ARROW                      &none    &none                     &mt LEFT_SHIFT LS(LA(K))  &mt LCTRL LA(M)           &mt LEFT_ALT LA(R)  &to 0
-&none  &none           &none                            &none            &none                                &none    &none                     &none                     &none                     &none               &none  &none
-                                                        &lt 3 BACKSPACE  &none                                &none    &mt LEFT_SHIFT BACKSPACE  &mt LEFT_CONTROL DELETE   &mt LEFT_ALT PRINTSCREEN
+       &none            &mt LC(LS(PAGE_UP)) RC(PAGE_UP)  &mt HOME END     &mt LC(LS(PAGE_DOWN)) LC(PAGE_DOWN)  &none    &none                     &bt BT_SEL 0              &bt BT_SEL 1              &bt BT_SEL 2        &none
+       &kp DOWN_ARROW   &kp LEFT_ARROW                   &kp UP_ARROW     &kp RIGHT_ARROW                      &none    &none                     &mt LEFT_SHIFT LS(LA(K))  &mt LCTRL LA(M)           &mt LEFT_ALT LA(R)  &to_base_lgui LGUI 0
+&none  &none            &none                            &none            &none                                &none    &none                     &none                     &none                     &none               &none                 &none
+                                                         &lt 3 BACKSPACE  &none                                &none    &mt LEFT_SHIFT BACKSPACE  &mt LEFT_CONTROL DELETE   &mt LEFT_ALT PRINTSCREEN
             >;
         };
 
         num_layer {
             label = "NUM";
             bindings = <
-       &none           &kp LA(R)        &mt LA(BACKSPACE) LA(M)  &mt LA(LS(K)) LA(K)    &none                      &none          &kp N4  &kp N5         &kp N6  &none
-       &mt CAPS ENTER  &mt LC(A) LC(D)  &mt LC(X) LC(C)          &mt LC(LS(V)) LC(V)    &none                      &none          &kp N1  &kp N2         &kp N3  &kp DOT
-&none  &none           &none            &none                    &none                  &none                      &none          &none   &none          &none   &none    &none
-                                        &kp BACKSPACE            &mt C_PREVIOUS C_NEXT  &mt C_MUTE C_PLAY_PAUSE    &kp C_AL_CALC  &none   &kp BACKSPACE
+       &none           &kp LA(R)        &mt LA(BACKSPACE) LA(M)  &mt LA(LS(K)) LA(K)    &none                    &none          &kp N4  &kp N5         &kp N6  &none
+       &mt CAPS ENTER  &mt LC(A) LC(D)  &mt LC(X) LC(C)          &mt LC(LS(V)) LC(V)    &none                    &none          &kp N1  &kp N2         &kp N3  &kp DOT
+&none  &none           &none            &none                    &none                  &none                    &none          &none   &none          &none   &none    &none
+                                        &kp BACKSPACE            &mt C_PREVIOUS C_NEXT  &mt C_MUTE C_PLAY_PAUSE  &kp C_AL_CALC  &none   &kp BACKSPACE
             >;
         };
 
         sym_layer {
             label = "SYM";
             bindings = <
-       &none      &kp CARET  &kp PRCNT            &kp AMPS             &none                      &none  &kp DQT   &kp AT     &kp HASH  &none
-       &kp TILDE  &kp BSLH   &kp LBKT             &kp RIGHT_BRACKET    &none                      &none  &kp APOS  &kp COLON  &kp SEMI  &kp DOLLAR
-&none  &none      &none      &none                &none                &none                      &none  &none     &none      &none     &none       &none
-                             &mt C_PREV C_VOL_DN  &mt C_NEXT C_VOL_UP  &mt C_MUTE C_PLAY_PAUSE    &none  &none     &none
+       &none      &kp CARET  &kp PRCNT            &kp AMPS             &none                    &none  &kp DQT   &kp AT    &kp HASH  &none
+       &kp TILDE  &kp BSLH   &kp LBKT             &kp RIGHT_BRACKET    &none                    &none  &kp APOS  &kp COLON &kp SEMI  &kp DOLLAR
+&none  &none      &none      &none                &none                &none                    &none  &none     &none     &none     &none       &none
+                             &mt C_PREV C_VOL_DN  &mt C_NEXT C_VOL_UP  &mt C_MUTE C_PLAY_PAUSE  &none  &none     &none
             >;
         };
 
