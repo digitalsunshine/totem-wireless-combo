@@ -24,7 +24,7 @@
 
         td1: neverclick {
             compatible = "zmk,behavior-tap-dance";
-            label = "TD1";
+            label = "neverclick";
             #binding-cells = <0>;
             bindings = <&lt 4 LA(K)>, <&kp LA(LS(K))>;
         };
@@ -386,7 +386,7 @@
        &none     &kp P     &kp O          &kp U            &none        &none     &kp K           &kp L         &kp D            &none
        &lt 1 I   &kp N     &kp E          &kp A            &none        &none     &kp M           &kp T         &kp S            &lt 2 R
 &none  &kp DOWN  &kp LEFT  &kp UP         &kp RIGHT        &none        &none     &mmv MOVE_LEFT  &mmv MOVE_UP  &mmv MOVE_RIGHT  &mmv MOVE_DOWN  &td0
-                           &lt 3 PAGE_UP  &lt 2 PAGE_DOWN  &kp SPACE    &kp BSPC  &lt 3 DEL       &lt 4 LA(K)
+                           &lt 3 PAGE_UP  &lt 2 PAGE_DOWN  &kp SPACE    &kp BSPC  &lt 3 DEL       &td1
             >;
         };
 
