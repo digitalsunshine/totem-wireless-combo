@@ -393,20 +393,20 @@
         mouse_layer {
             label = "MOUSE";
             bindings = <
-       &none  &mt LEFT_CONTROL LC(Z)  &msc SCRL_UP          &mt LEFT_SHIFT LC(Y)   &none          &none      &msc SCRL_DOWN  &mmv MOVE_UP  &td0             &none
+       &none  &mt LEFT_CONTROL LC(Z)  &msc SCRL_UP          &mt LEFT_SHIFT LC(Y)   &none          &none      &none           &none         &td0             &none
        &to 0  &msc SCRL_LEFT          &msc SCRL_DOWN        &msc SCRL_RIGHT        &none          &none      &mmv MOVE_LEFT  &mmv MOVE_UP  &mmv MOVE_RIGHT  &mmv MOVE_DOWN
 &none  &none  &none                   &none                 &none                  &none          &none      &none           &none         &none            &none           &none
-                                      &lt 2 LA(LEFT_ARROW)  &lt 3 LA(RIGHT_ARROW)  &kp LA(TAB)    &mkp LCLK  &none           &lt 5 DELETE
+                                      &lt 3 LA(LEFT_ARROW)  &lt 2 LA(RIGHT_ARROW)  &kp LA(TAB)    &mkp LCLK  &none           &lt 5 DELETE
             >;
         };
 
         nav_media_layer {
             label = "NAV";
             bindings = <
-       &none           &mt LC(LS(PAGE_UP)) RC(PAGE_UP)  &mt HOME END  &mt LC(LS(PAGE_DOWN)) LC(PAGE_DOWN)  &none    &none                     &bt BT_SEL 0              &bt BT_SEL 1              &bt BT_SEL 2        &none
-       &kp DOWN_ARROW  &kp LEFT_ARROW                   &kp UP_ARROW  &kp RIGHT_ARROW                      &none    &none                     &mt LEFT_SHIFT LS(LA(K))  &mt LCTRL LA(M)           &mt LEFT_ALT LA(R)  &to 0
-&none  &none           &none                            &none         &none                                &none    &none                     &none                     &none                     &none               &none  &none
-                                                        &none         &none                                &none    &mt LEFT_SHIFT BACKSPACE  &mt LEFT_CONTROL DELETE   &mt LEFT_ALT PRINTSCREEN
+       &none           &mt LC(LS(PAGE_UP)) RC(PAGE_UP)  &mt HOME END     &mt LC(LS(PAGE_DOWN)) LC(PAGE_DOWN)  &none    &none                     &bt BT_SEL 0              &bt BT_SEL 1              &bt BT_SEL 2        &none
+       &kp DOWN_ARROW  &kp LEFT_ARROW                   &kp UP_ARROW     &kp RIGHT_ARROW                      &none    &none                     &mt LEFT_SHIFT LS(LA(K))  &mt LCTRL LA(M)           &mt LEFT_ALT LA(R)  &to 0
+&none  &none           &none                            &none            &none                                &none    &none                     &none                     &none                     &none               &none  &none
+                                                        &lt 3 BACKSPACE  &none                                &none    &mt LEFT_SHIFT BACKSPACE  &mt LEFT_CONTROL DELETE   &mt LEFT_ALT PRINTSCREEN
             >;
         };
 
