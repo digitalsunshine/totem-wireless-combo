@@ -178,27 +178,27 @@
         combo_bspc {
             timeout-ms = <50>;
             key-positions = <2 11>;
-            layers = <0>;
+            layers = <0 1 2>;
             bindings = <&kp BSPC>;
         };
 
         combo_del {
             timeout-ms = <50>;
             key-positions = <2 13>;
-            layers = <0>;
+            layers = <0 1 2>;
             bindings = <&kp DEL>;
         };
 
         combo_esc {
             bindings = <&kp ESC>;
             key-positions = <1 10>;
-            layers = <0>;
+            layers = <0 1 2>;
         };
 
         combo-tab {
             bindings = <&kp TAB>;
             key-positions = <3 13>;
-            layers = <0>;
+            layers = <0 1 2>;
         };
 
         combo-leftbracket {
@@ -218,28 +218,28 @@
         combo_osm_shift_right {
             timeout-ms = <50>;
             key-positions = <16 17>;
-            layers = <0>;
+            layers = <0 2>;
             bindings = <&sk LSHFT>;
         };
 
         combo_osm_alt_right {
             timeout-ms = <50>;
             key-positions = <6 7>;
-            layers = <0>;
+            layers = <0 2>;
             bindings = <&sk LALT>;
         };
 
         combo_osm_ctrl_right {
             timeout-ms = <50>;
             key-positions = <17 18>;
-            layers = <0>;
+            layers = <0 2>;
             bindings = <&sk LCTRL>;
         };
 
         combo_osm_gui_right {
             timeout-ms = <50>;
             key-positions = <7 8>;
-            layers = <0>;
+            layers = <0 2>;
             bindings = <&sk LGUI>;
         };
 
@@ -247,27 +247,27 @@
             bindings = <&sk LSHFT>;
             key-positions = <13 12>;
             timeout-ms = <50>;
-            layers = <0>;
+            layers = <0 1>;
         };
 
         combo_osm_alt_left {
             bindings = <&sk LALT>;
             key-positions = <3 2>;
             timeout-ms = <50>;
-            layers = <0>;
+            layers = <0 1>;
         };
 
         combo_osm_ctrl_left {
             bindings = <&sk LCTRL>;
             key-positions = <12 11>;
             timeout-ms = <50>;
-            layers = <0>;
+            layers = <0 1>;
         };
 
         combo_osm_gui_left {
             timeout-ms = <50>;
             key-positions = <1 2>;
-            layers = <0>;
+            layers = <0 1>;
             bindings = <&sk LGUI>;
         };
 
@@ -366,22 +366,34 @@
             layers = <0>;
         };
 
-        combo_bspc-nav {
-            bindings = <&kp BACKSPACE>;
-            key-positions = <7 16>;
-            layers = <2>;
-        };
-
-        combo_del-nav {
-            bindings = <&kp DEL>;
-            key-positions = <7 18>;
-            layers = <2>;
-        };
-
         combo_enter {
             bindings = <&kp ENTER>;
             key-positions = <6 16>;
-            layers = <0>;
+            layers = <0 1 2>;
+        };
+
+        combo_fn-toggle {
+            bindings = <&to 5>;
+            key-positions = <10 19>;
+            layers = <0 1 2>;
+        };
+
+        combo_mouse-tohome {
+            bindings = <&to 0>;
+            key-positions = <16 7 18>;
+            layers = <1>;
+        };
+
+        combo_nav-tohome {
+            bindings = <&to 0>;
+            key-positions = <2 11 13>;
+            layers = <2>;
+        };
+
+        combo_fn-tohome {
+            bindings = <&to 0>;
+            key-positions = <10 19>;
+            layers = <5>;
         };
     };
 
@@ -446,29 +458,29 @@
             label = "FN";
             bindings = <
        &none  &kp F4  &kp F5  &kp F6  &none    &none           &kp F10           &kp F11       &kp F12  &none
-       &none  &kp F1  &kp F2  &kp F3  &none    &none           &kp F7            &kp F8        &kp F9   &lt 10 ENTER
+       &to 0  &kp F1  &kp F2  &kp F3  &none    &none           &kp F7            &kp F8        &kp F9   &lt 10 ENTER
 &none  &none  &none   &none   &none   &none    &none           &none             &none         &none    &none         &none
-                      &none   &none   &none    &kp LEFT_SHIFT  &kp LEFT_CONTROL  &kp LEFT_ALT
+                      &to 6   &to 7   &to 8    &kp LEFT_SHIFT  &kp LEFT_CONTROL  &kp LEFT_ALT
             >;
         };
 
         misc1_layer {
             label = "MISC1";
             bindings = <
-       &none  &none  &none   &none   &none     &none  &none  &none  &none  &none
-       &none  &none  &none   &none   &none     &none  &none  &none  &none  &none
-&none  &none  &none  &none   &none   &none     &none  &none  &none  &none  &none  &none
-                     &trans  &trans  &trans    &none  &none  &none
+       &none  &none  &none  &none   &none     &none  &none  &none  &none  &none
+       &none  &none  &none  &none   &none     &none  &none  &none  &none  &none
+&none  &none  &none  &none  &none   &none     &none  &none  &none  &none  &none  &none
+                     &to 0  &trans  &trans    &none  &none  &none
             >;
         };
 
         misc2_layer {
             label = "MISC2";
             bindings = <
-       &none  &none  &none   &none   &none     &none  &none  &none  &none  &none
-       &none  &none  &none   &none   &none     &none  &none  &none  &none  &none
-&none  &none  &none  &none   &none   &none     &none  &none  &none  &none  &none  &none
-                     &trans  &trans  &trans    &none  &none  &none
+       &none  &none  &none   &none  &none     &none  &none  &none  &none  &none
+       &none  &none  &none   &none  &none     &none  &none  &none  &none  &none
+&none  &none  &none  &none   &none  &none     &none  &none  &none  &none  &none  &none
+                     &trans  &to 0  &trans    &none  &none  &none
             >;
         };
 
@@ -478,7 +490,7 @@
        &none  &none  &none  &none  &none    &none  &none  &none  &none  &none
        &none  &none  &none  &none  &none    &none  &none  &none  &none  &none
 &none  &none  &none  &none  &none  &none    &none  &none  &none  &none  &none  &none
-                     &none  &none  &none    &none  &none  &none
+                     &none  &none  &to 0    &none  &none  &none
             >;
         };
 
@@ -503,22 +515,5 @@
         };
     };
 
-    conditional_layers {
-        compatible = "zmk,conditional-layers";
-
-        function-layer {
-            if-layers = <1 2>;
-            then-layer = <5>;
-        };
-
-        misc2_layer {
-            if-layers = <2 3>;
-            then-layer = <7>;
-        };
-
-        misc1_layer {
-            if-layers = <1 3>;
-            then-layer = <6>;
-        };
-    };
+    conditional_layers { compatible = "zmk,conditional-layers"; };
 };
