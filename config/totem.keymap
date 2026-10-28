@@ -6,7 +6,6 @@
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
-#include <dt-bindings/zmk/outputs.h>
 #include <dt-bindings/zmk/pointing.h>
 
 / {
@@ -341,18 +340,6 @@
         /* ================================================================== */
         /*                             MISC COMBOS                            */
         /* ================================================================== */
-
-        combo_output_usb {
-            bindings = <&out OUT_USB>;
-            key-positions = <6 7>;
-            layers = <2>;
-        };
-
-        combo_output_ble {
-            bindings = <&out OUT_BLE>;
-            key-positions = <7 8>;
-            layers = <2>;
-        };
 
         combo_mouse-toggle {
             bindings = <&to 1>;
